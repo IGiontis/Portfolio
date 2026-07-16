@@ -2,7 +2,7 @@
 
 Personal portfolio website of **Ilias Giontis**, Front-End Engineer / React.js Specialist.
 
-**Live site:** _coming soon on Netlify_
+**Live site:** [igiontisportfolio.netlify.app](https://igiontisportfolio.netlify.app/)
 
 ## Tech Stack
 
