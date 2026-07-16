@@ -19,8 +19,9 @@
   --hero-gradient: radial-gradient(ellipse at top, rgba(96, 165, 250, 0.08), transparent 60%);
 }
 
+/* No CSS smooth scrolling: section navigation is animated in JS
+   (src/utils/scroll.ts) — native smooth conflicts with it. */
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 72px;
 }
 
