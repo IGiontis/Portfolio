@@ -1,0 +1,156 @@
+/* ---------------------------------------------------------------------------
+   Theme variables — the only custom colors in the app. Everything else uses
+   Bootstrap utilities; the classes below exist solely for accent-color styling
+   and effects Bootstrap has no utility for.
+--------------------------------------------------------------------------- */
+:root {
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.12);
+  --section-alt-bg: #f1f5f9;
+  --hero-gradient: radial-gradient(ellipse at top, rgba(37, 99, 235, 0.1), transparent 60%);
+}
+
+[data-bs-theme='dark'] {
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --accent-soft: rgba(96, 165, 250, 0.14);
+  --section-alt-bg: #16181d;
+  --hero-gradient: radial-gradient(ellipse at top, rgba(96, 165, 250, 0.08), transparent 60%);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--section-alt-bg);
+}
+
+/* Section heading with the accent underline. */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 3rem;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.section-title-centered::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- Accent-colored building blocks ------------------------------------- */
+
+.text-accent {
+  color: var(--accent);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+.btn-outline-accent {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-outline-accent:hover,
+.btn-outline-accent:focus {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.badge-accent {
+  background-color: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  font-weight: 500;
+}
+
+.link-accent {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-accent:hover {
+  text-decoration: underline;
+}
+
+/* Square/round icon container used across sections. */
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  flex-shrink: 0;
+}
+
+.icon-chip-md {
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+}
+
+/* --- Effects ------------------------------------------------------------- */
+
+.hover-lift {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.social-link {
+  color: var(--bs-secondary-color);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}

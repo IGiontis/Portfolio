@@ -1,0 +1,16 @@
+/* Banner height, title shadow, and glassy type badge — beyond Bootstrap. */
+
+.banner {
+  height: 130px;
+}
+
+.bannerTitle {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.typeBadge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}

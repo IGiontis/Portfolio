@@ -1,0 +1,18 @@
+/* Gradient backdrop, fixed-navbar offset, and avatar sizing — no Bootstrap
+   utilities exist for these. */
+
+.hero {
+  background-image: var(--hero-gradient);
+  padding-top: 72px;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  font-size: 3rem;
+  border: 2px solid var(--accent);
+}
+
+.tagline {
+  max-width: 620px;
+}

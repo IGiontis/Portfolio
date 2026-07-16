@@ -1,0 +1,5 @@
+/* Readable line length for the subtitle — no Bootstrap max-width utility. */
+
+.subtitle {
+  max-width: 560px;
+}

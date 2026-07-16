@@ -1,0 +1,19 @@
+/* Value column alignment and the clickable-card hover state. */
+
+.value {
+  min-width: 3rem;
+}
+
+.clickable {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.clickable:hover,
+.clickable:focus-visible {
+  border-color: var(--accent) !important;
+  transform: translateY(-2px);
+  outline: none;
+}
