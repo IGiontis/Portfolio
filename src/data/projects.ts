@@ -13,7 +13,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'edessaikos',
-    tech: ['React 19', 'TypeScript', 'Vite', 'Firebase Firestore', 'Cloudinary', 'PWA'],
+    tech: [
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'Firebase',
+      'TanStack Query',
+      'Cloudinary',
+      'i18next',
+      'PWA',
+    ],
     live: projectLinks.edessaikos.live,
     github: projectLinks.edessaikos.github,
     isClientProject: true,

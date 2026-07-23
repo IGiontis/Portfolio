@@ -115,12 +115,13 @@ export const content = {
       edessaikos: {
         name: 'Edessaikos FC',
         description:
-          'Bilingual (EL/EN) website and content management system for a football club, delivered to a real client. Public site with team roster, league standings with promotion/relegation zones, match center with live player stat sync, news, academies, and store — plus a 13-module admin panel usable without technical knowledge.',
+          'Bilingual (EL/EN) website and content management system for an amateur football club — live in production and run day-to-day by the club owner with zero developer involvement. Public site covers first-team and youth-academy rosters, an auto-derived league table, a full match center (lineups, goals, cards, subs, extra time, penalties), news, gallery, sponsors, and shop, plus a 13-module admin panel usable without any technical knowledge.',
         highlights: [
-          'Installable PWA with light/dark mode and splash screen',
-          'Network resilience: auto-retry for images, timeout guards, chunk retry for unstable mobile networks',
-          'Firestore cost engineering: pagination, batched writes, localStorage cache — stays on the free tier',
-          'Security rules, DOMPurify sanitization, auth-gated admin, 78 automated tests',
+          'Auto-derived standings from a single source of truth: entering scores computes the full table (W/D/L, goal difference, form), and Edessaikos’s own fixtures reconcile automatically — no double data entry',
+          'Firestore cost engineering to stay on the free tier: derived-not-stored data, one settings doc instead of a collection, chunked batch writes, and pagination',
+          'Installable PWA with light/dark theme, animated splash screen, and offline resilience (read timeouts, retry, localStorage-cached queries)',
+          'Route-based code-splitting with automatic retry on stale post-deploy chunks; heavy admin-only libraries never ship in the public bundle',
+          'Firestore security rules, DOMPurify XSS sanitization, auth-gated admin, and 89 automated tests (Vitest)',
         ],
       },
       myfiwallet: {
