@@ -127,13 +127,13 @@ export const content = {
       myfiwallet: {
         name: 'MyFiWallet',
         description:
-          'A personal finance PWA built to answer one question: where does my money actually go? It covers the whole month: spending, recurring bills, goals and investments, loans and debts, and a plan for what’s left. Bilingual (English/Greek), in USD, EUR, or GBP, installable and usable offline.',
+          'A personal finance app built to answer one question: where does my money actually go? It tracks what comes in and goes out, the bills that recur, what you owe and are owed, and whether the month ahead works. In English or Greek, EUR, USD, or GBP, on a phone or a desktop, online or off, and backed by more than 1,000 automated tests.',
         highlights: [
-          'Planner and allocation: set your pay once and every bill, goal, and loan payment lands on its day across the months ahead; what’s left splits into budgets seeded from your last three months of spending',
-          'Recurring bills on any cycle, with variable amounts that learn your average, pausing, and paying ahead, plus a year-ahead view; each payment is logged as an expense automatically',
-          'Loans with fixed or floating rates (Euribor or ECB index plus margin) and interest-free periods, with a payoff view showing the interest and months an extra monthly payment saves',
-          'Eleven analytics views, including net worth over time and an income-to-savings waterfall (ECharts, Recharts), and period statements that print or save as PDF',
-          '1,043 automated tests across 38 files: the money logic, from bill cycles to loan interest to plan reconciliation, lives in tested pure functions',
+          'Planner that answers “Will I make it?”: the balance day by day over the months ahead, built from pay day, bills, and debts; Allocation splits what’s left and compares the plan with what actually happened',
+          'Bills with variable amounts, instalments, custom intervals, and pauses, shown as cards, a list, the next 12 months, or a month timeline that says how much leaves before pay day, plus an overdue list',
+          'Loans with fixed or floating rates and interest-free months: monthly payment, finish date, principal vs. interest on every payment, and a “what if” showing the interest saved by paying a little more',
+          'Analytics built around net worth, savings rate, pace of the month, and committed vs. free money (Recharts, ECharts), plus a printable statement for any period',
+          'Works offline: loaded data stays readable, new entries sync on reconnect, exchange rates are cached with their date, and a “New version” prompt waits until you finish a form',
         ],
       },
       favmoviesshare: {

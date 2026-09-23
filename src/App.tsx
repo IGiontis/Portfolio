@@ -1,4 +1,5 @@
 import NavBar from './components/NavBar/NavBar';
+import Dock from './components/Dock/Dock';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
@@ -7,11 +8,16 @@ import Certifications from './components/Certifications/Certifications';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import { sections } from './data/sections';
+import { useScrollSpy } from './hooks/useScrollSpy';
 
 function App() {
+  // One scrollspy for both navigations: it also keeps the URL hash in sync.
+  const activeSection = useScrollSpy(sections);
+
   return (
     <>
-      <NavBar />
+      <NavBar activeSection={activeSection} />
       <main>
         <Hero />
         <About />
@@ -22,6 +28,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Dock activeSection={activeSection} />
     </>
   );
 }
