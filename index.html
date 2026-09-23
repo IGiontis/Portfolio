@@ -9,6 +9,20 @@
       content="Ilias Giontis — Front-End Engineer. React, TypeScript, responsive web applications."
     />
     <title>Ilias Giontis | Front-End Engineer</title>
+    <script>
+      // Apply the saved (or OS) theme before first paint, so dark mode never flashes
+      // light on load. Same rule as getInitialTheme in src/context/ThemeContext.tsx.
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem('theme');
+        } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

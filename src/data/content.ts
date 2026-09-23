@@ -121,13 +121,13 @@ export const content = {
           'Netlify Edge Functions give crawlers what a single-page app can’t: per-page titles and Open Graph tags, real 404s, a live sitemap, and a share image for every match composed from both crests and the score',
           'Installable PWA that updates on the visitor’s terms: a new version waits behind an update prompt instead of breaking the open app, with an offline banner, read timeouts, and cached queries for weak mobile networks',
           'Measured performance and cost work: main stylesheet cut from 674 KB to 269 KB, offline precache from 5.8 MB to 2.2 MB, and Firestore kept on the free tier with derived data, batched writes, and pagination',
-          'Route-level code splitting with retry on stale chunks, DOMPurify sanitization, and 146 automated tests',
+          'Route-level code splitting with automatic retry on stale chunks after a deploy, and DOMPurify sanitization on every rich-text render',
         ],
       },
       myfiwallet: {
         name: 'MyFiWallet',
         description:
-          'A personal finance app built to answer one question: where does my money actually go? It tracks what comes in and goes out, the bills that recur, what you owe and are owed, and whether the month ahead works. In English or Greek, EUR, USD, or GBP, on a phone or a desktop, online or off, and backed by more than 1,000 automated tests.',
+          'A personal finance app built to answer one question: where does my money actually go? It tracks what comes in and goes out, the bills that recur, what you owe and are owed, and whether the month ahead works. In English or Greek, EUR, USD, or GBP, on a phone or a desktop, online or off.',
         highlights: [
           'Planner that answers “Will I make it?”: the balance day by day over the months ahead, built from pay day, bills, and debts; Allocation splits what’s left and compares the plan with what actually happened',
           'Bills with variable amounts, instalments, custom intervals, and pauses, shown as cards, a list, the next 12 months, or a month timeline that says how much leaves before pay day, plus an overdue list',
