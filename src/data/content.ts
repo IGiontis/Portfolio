@@ -81,7 +81,7 @@ export const content = {
         period: '2026',
         bullets: [
           'Designed, built, and delivered a complete bilingual club website with a 13-module admin panel',
-          'Owned the full lifecycle: architecture, Firebase backend design, performance and cost engineering, deployment',
+          'Owned the full lifecycle: architecture, Firebase data model, Netlify Edge Functions for SEO and share previews, performance and cost work, deployment',
         ],
       },
     ],
@@ -115,24 +115,25 @@ export const content = {
       edessaikos: {
         name: 'Edessaikos FC',
         description:
-          'Bilingual (EL/EN) website and content management system for an amateur football club — live in production and run day-to-day by the club owner with zero developer involvement. Public site covers first-team and youth-academy rosters, an auto-derived league table, a full match center (lineups, goals, cards, subs, extra time, penalties), news, gallery, sponsors, and shop, plus a 13-module admin panel usable without any technical knowledge.',
+          'Bilingual (Greek/English) website and admin system for an amateur football club, live in production and run day-to-day by the club owner with no developer involvement. The public site covers first-team and academy rosters, an auto-derived league table, match pages with line-ups, event timelines, and kick-off countdowns, plus news, gallery, sponsors, and a shop, all managed through a 13-module admin panel.',
         highlights: [
-          'Auto-derived standings from a single source of truth: entering scores computes the full table (W/D/L, goal difference, form), and Edessaikos’s own fixtures reconcile automatically — no double data entry',
-          'Firestore cost engineering to stay on the free tier: derived-not-stored data, one settings doc instead of a collection, chunked batch writes, and pagination',
-          'Installable PWA with light/dark theme, animated splash screen, and offline resilience (read timeouts, retry, localStorage-cached queries)',
-          'Route-based code-splitting with automatic retry on stale post-deploy chunks; heavy admin-only libraries never ship in the public bundle',
-          'Firestore security rules, DOMPurify XSS sanitization, auth-gated admin, and 89 automated tests (Vitest)',
+          'Standings derived from a single source of truth: entering scores rebuilds the whole table (wins, draws, losses, goal difference, form), and the club’s own fixtures reconcile automatically, so nothing is entered twice',
+          'Netlify Edge Functions give crawlers what a single-page app can’t: per-page titles and Open Graph tags, real 404s, a live sitemap, and a share image for every match composed from both crests and the score',
+          'Installable PWA that updates on the visitor’s terms: a new version waits behind an update prompt instead of breaking the open app, with an offline banner, read timeouts, and cached queries for weak mobile networks',
+          'Measured performance and cost work: main stylesheet cut from 674 KB to 269 KB, offline precache from 5.8 MB to 2.2 MB, and Firestore kept on the free tier with derived data, batched writes, and pagination',
+          'Route-level code splitting with retry on stale chunks, DOMPurify sanitization, and 146 automated tests',
         ],
       },
       myfiwallet: {
         name: 'MyFiWallet',
         description:
-          'Personal finance PWA for managing income, expenses, savings goals, and investments in one place. Built to answer a simple question: where does my money actually go?',
+          'A personal finance PWA built to answer one question: where does my money actually go? It covers the whole month: spending, recurring bills, goals and investments, loans and debts, and a plan for what’s left. Bilingual (English/Greek), in USD, EUR, or GBP, installable and usable offline.',
         highlights: [
-          'Financial overview with weekly cash-flow charts (Recharts)',
-          'Transaction tracking with calendar view and category filters',
-          'Investment portfolio with recurring contributions and savings goals with deadlines',
-          'Live USD/EUR/GBP conversion via Exchange Rate API, Google sign-in via Firebase',
+          'Planner and allocation: set your pay once and every bill, goal, and loan payment lands on its day across the months ahead; what’s left splits into budgets seeded from your last three months of spending',
+          'Recurring bills on any cycle, with variable amounts that learn your average, pausing, and paying ahead, plus a year-ahead view; each payment is logged as an expense automatically',
+          'Loans with fixed or floating rates (Euribor or ECB index plus margin) and interest-free periods, with a payoff view showing the interest and months an extra monthly payment saves',
+          'Eleven analytics views, including net worth over time and an income-to-savings waterfall (ECharts, Recharts), and period statements that print or save as PDF',
+          '1,043 automated tests across 38 files: the money logic, from bill cycles to loan interest to plan reconciliation, lives in tested pure functions',
         ],
       },
       favmoviesshare: {

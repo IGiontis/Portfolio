@@ -46,6 +46,12 @@ export const certifications: Certification[] = [
     url: 'https://ude.my/UC-8280947b-28dd-4db7-8efa-aa4ce120283e',
   },
   {
+    title: 'Crash Course: Build a Full-Stack Web App in a Weekend',
+    provider: 'Udemy',
+    date: 'Dec 2023',
+    url: 'https://ude.my/UC-a093326e-64ee-4a30-a5e4-48d505a53d5f',
+  },
+  {
     title: 'The Complete React Native + Hooks Course',
     provider: 'Udemy',
     instructor: 'Stephen Grider',
@@ -68,6 +74,12 @@ export const certifications: Certification[] = [
     date: 'Jul 2023',
     hours: 51,
     url: 'https://ude.my/UC-8b2f9411-7d8c-46fd-96ae-c6cb65942c38',
+  },
+  {
+    title: "Microfrontends with React: A Complete Developer's Guide",
+    provider: 'Udemy',
+    date: 'Jul 2023',
+    url: 'https://ude.my/UC-208dcaf9-a323-4d38-8ee6-cb3e0a7174bd',
   },
   {
     title: 'Angular & NodeJS - The MEAN Stack Guide',
